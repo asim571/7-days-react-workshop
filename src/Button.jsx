@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-type'
+// import PropTypes from 'prop-type'
 
 function Button(props) {
     const title = props.title;
@@ -10,12 +10,12 @@ function Button(props) {
   )
 }
 
-Button.defaultProps = {
-    title : 'Default'
-}
-Button.PropTypes = {
-    title : PropTypes.string.isRequired
-}
+// Button.defaultProps = {
+//     title : 'Default'
+// }
+// Button.PropTypes = {
+//     title : PropTypes.string.isRequired
+// }
 
 export default Button
 
