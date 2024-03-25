@@ -14,16 +14,18 @@ function Contact() {
       setNumber(number-1)
     }
   }
-  // console.log(state[0])
-  // console.log(state[1])
+
   return (
     <div>
       <h1>This is Contact Page</h1>
       <div>{number}</div>
       <button onClick={inCount}>+</button>
       <button onClick={decCount}>-</button>
+      <div>
+      </div>
     </div>
   )
 }
+
 
 export default Contact
