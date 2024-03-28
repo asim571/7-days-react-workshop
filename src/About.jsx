@@ -33,7 +33,7 @@ const AboutPage = () => {
         <li>MongoDB for storing product data.</li>
       </ul>
       <p>
-        For any inquiries or support, please contact us at support@example.com.
+        For any inquiries or support, please contact us at pms111@gmail.com
       </p>
     </div>
     <Footer />

@@ -28,3 +28,11 @@
     margin: 5px 0;
     color: #4CAF50; /* green color for price */
 }
+
+.link{
+    color:rgb(120, 131, 131);
+    text-decoration: none;
+}
+.link:hover{
+    background-color: rgb(221, 225, 162);
+}
