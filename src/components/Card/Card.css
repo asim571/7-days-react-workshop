@@ -1,5 +1,3 @@
-
-
 .card {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -35,4 +33,5 @@
 }
 .link:hover{
     background-color: rgb(221, 225, 162);
+    text-decoration: underline;
 }
