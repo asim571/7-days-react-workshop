@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './EditProduct.css'
+import Navbar from '../../components/navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 const EditProduct = () => {
   const { id } = useParams();
@@ -52,6 +54,8 @@ const EditProduct = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="form-container" style={{ marginTop: '20px' }}>
       <h2>Edit Product</h2>
       <form onSubmit={updateProduct}>
@@ -78,6 +82,8 @@ const EditProduct = () => {
         <button type="submit">Update</button>
       </form>
     </div>
+    <Footer />
+    </>
   );
 };
 

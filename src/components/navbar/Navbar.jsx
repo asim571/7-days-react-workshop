@@ -1,22 +1,22 @@
-import React from 'react'
-import './Navbar.css'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import './Navbar.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate()
   return (
     <nav>
-        <div className="container">
-            <div className="logo">PMS</div>
-            <ul className="nav-links">
-                {/* <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li> */}
-            </ul>
-            <Link to="/addproduct" className="add-product-btn">Add Product</Link>
-        </div>
+      <div className="container">
+        <div className="logo">Product Management System</div>
+        <ul className="nav-links">
+          <li><Link to="/" className="nav-link">Home</Link></li>
+          <li><Link to="/about" className="nav-link">About</Link></li>
+          <li><Link to="/contact" className="nav-link">Contact</Link></li>
+        </ul>
+        <Link to="/addproduct" className="add-product-btn">Add Product</Link>
+      </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

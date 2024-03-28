@@ -3,6 +3,7 @@ import Navbar from '../../components/navbar/Navbar'
 import './AddProduct.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import Footer from '../../components/Footer/Footer'
 
 const AddProduct = () => {
   const navigate = useNavigate()
@@ -73,6 +74,7 @@ const AddProduct = () => {
             <button type="submit">Submit</button>
         </form>
     </div>
+    <Footer />
     </>
   )
 }

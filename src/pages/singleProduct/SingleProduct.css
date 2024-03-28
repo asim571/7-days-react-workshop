@@ -1,4 +1,6 @@
-
+body{
+    background-color: rgb(210, 208, 208);
+}
 
 .product-container {
     display: flex;

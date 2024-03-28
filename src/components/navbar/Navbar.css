@@ -1,60 +1,102 @@
-/* External CSS file: styles.css */
+/* Navbar.css */
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 nav {
-    background-color: #333;
-    color: #fff;
-    padding: 15px 0;
+  background-color: #2980b9; /* Change the background color */
+  color: #fff;
+  padding: 15px 0;
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .logo {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
 }
 
-.nav-links li a {
-    text-decoration: none;
-    color: #fff;
+.nav-links li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #f1c40f; /* Change the hover color */
 }
 
 .add-product-btn {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+  padding: 10px 20px;
+  background-color: #27ae60; /* Change the button background color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .add-product-btn:hover {
-    background-color: #45a049;
+  background-color: #2ecc71; /* Change the hover background color */
 }
 
-.content {
-    padding: 20px;
-    /* Adjust as needed */
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .nav-links li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .add-product-btn {
+    margin-top: 10px;
+  }
+
+  /* Decrease font size for small screens */
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .add-product-btn {
+    font-size: 14px;
+  }
 }

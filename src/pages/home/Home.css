@@ -1,0 +1,15 @@
+/* Home.css */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px; /* Add margin for spacing */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card-container {
+      justify-content: center; /* Center align cards on small screens */
+    }
+  }
+  
