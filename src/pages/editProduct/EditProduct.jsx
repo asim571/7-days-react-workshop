@@ -20,7 +20,7 @@ const EditProduct = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.put(`https://6601a11b87c91a11641b49dc.mockapi.io/products/:${id}`);
+        const response = await axios.get(`https://6601a11b87c91a11641b49dc.mockapi.io/products/${id}`);
         setData(response.data);
       } catch (error) {
         console.error('Error fetching product:', error);
