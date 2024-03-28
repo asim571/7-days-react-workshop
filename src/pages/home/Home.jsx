@@ -7,8 +7,11 @@ const Home = () => {
   const [products,setProducts] = useState([])
 
   const fetchProducts = async ()=>{
-   const response = await axios.get('https://6601a11c87c91a11641b49f1.mockapi.io/products')
+   const response = await axios.get('https://6601a11b87c91a11641b49dc.mockapi.io/products')
    if(response.status === 200){
+    // const updatedProducts = response.data.map((products) => {
+    //   return {...products, image:products.image + `?random=${products.id}`}
+    // });
     setProducts(response.data)
    }else{
     alert("Something went wrong")

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import axios from 'axios'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, Link } from 'react-router-dom'
 import './SingleProduct.css'
 
 const SingleProduct = () => {
@@ -9,7 +9,7 @@ const SingleProduct = () => {
   const navigate = useNavigate()
   const [product,setProduct] = useState({})
   const fetchProduct = async()=>{
-   const response = await axios.get("https://6601a11c87c91a11641b49f1.mockapi.io/products/" + id )
+   const response = await axios.get("https://6601a11b87c91a11641b49dc.mockapi.io/products/" + id )
    if(response.status === 200){
     setProduct(response.data)
    }else{
@@ -18,7 +18,7 @@ const SingleProduct = () => {
   }
 
   const deleteProduct = async ()=>{
-    const response = await axios.delete("https://6601a11c87c91a11641b49f1.mockapi.io/products/" + id )
+    const response = await axios.delete("https://6601a11b87c91a11641b49dc.mockapi.io/products/" + id )
     if(response.status === 200){
       navigate("/")
     }else{
@@ -43,7 +43,7 @@ const SingleProduct = () => {
             <p class="product-price">${product.price}</p>
             <p class="product-category">{product.category}</p>
             <button class="add-to-cart-btn" onClick={deleteProduct}>Delete</button>
-            <button class="add-to-cart-btn" style={{marginLeft:'10px'}}>Edit</button>
+            <Link to={`/edit/${id}`} className="add-to-cart-btn" style={{ marginLeft: '10px',textDecoration:'None' }}>Edit</Link>
         </div>
     </div>
     </>
